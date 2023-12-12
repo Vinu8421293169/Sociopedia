@@ -60,13 +60,23 @@ const PostWidget = ({
         {description}
       </Typography>
       {picturePath && (
-        <img
-          width="100%"
-          height="auto"
-          alt="post"
-          style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`http://localhost:3001/assets/${picturePath}`}
-        />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <span>
+            <img
+              height="auto"
+              alt="post"
+              style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
+              src={`http://localhost:3001/assets/${picturePath}`}
+            />
+          </span>
+        </div>
       )}
       <FlexBetween mt="0.25rem">
         <FlexBetween gap="1rem">
